@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  --color-ink-50: #f6f7f9;
+  --color-ink-100: #eceef2;
+  --color-ink-200: #d5dae2;
+  --color-ink-300: #b0b9c7;
+  --color-ink-400: #8592a5;
+  --color-ink-500: #66748a;
+  --color-ink-600: #505d71;
+  --color-ink-700: #414b5c;
+  --color-ink-800: #39414e;
+  --color-ink-900: #232833;
+
+  --color-brand-50: #eefbf4;
+  --color-brand-100: #d6f5e4;
+  --color-brand-200: #b0e9cd;
+  --color-brand-300: #7ad6ae;
+  --color-brand-400: #43bd8b;
+  --color-brand-500: #1fa471;
+  --color-brand-600: #14855b;
+  --color-brand-700: #116b4b;
+  --color-brand-800: #10553d;
+  --color-brand-900: #0e4634;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink-50);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Prices are the most-scanned element on the page; give them a tabular
+     figure style so digits align vertically across cards. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
